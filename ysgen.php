@@ -8,7 +8,7 @@ use Ysgen\Src\StructureSaver;
 use Ysgen\Src\ConsoleHelper;
 
 $consoleHelper = new ConsoleHelper($argv);
-$action = strtolower($argv[2]);
+$action = isset($argv[2]) ? strtolower($argv[2]) : '';
 
 switch ($action) {
     case 'generate':
