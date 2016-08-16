@@ -1,0 +1,10 @@
+{
+    "name": "glowdemon1/ysgen",
+    "description": "Quickly generate project structure from a .yml file. Allows re-using too.",
+    "require": {
+        "symfony/yaml": "3.1.3"
+    },
+    "autoload": {
+        "psr-4": {"Ysgen\\Src\\": "Src/"}
+    }
+}
