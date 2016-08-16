@@ -21,11 +21,6 @@ switch ($action) {
         $consoleHelper->list();
         break;
     default:
-        echo 'Available commands: ' . PHP_EOL;
-        echo '
-            generate <optional:name> - Convert a local (global if name is specified)
-            structure.yml file into a project structure.
-        ';
-        echo 'save <name> - Save a local structure.yml and make it usable globally.';
+        $consoleHelper->printInterface();
         break;
 }

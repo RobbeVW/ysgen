@@ -63,4 +63,36 @@ class ConsoleHelper
         echo 'Available template files:' . PHP_EOL;
         echo implode(PHP_EOL, $files);
     }
+
+    /**
+     * Print the interface
+     */
+    public function printInterface()
+    {
+        $commands = [
+            'generate' => [
+                'args' => 'optional:name',
+                'description' => "Generates a project's structure, uses saved template if name is specified."
+            ],
+            'save' => [
+                'args' => 'name',
+                'description' => 'Save a local structure.yml and make it usable globally.'
+            ],
+            'list' => [
+                'args' => '',
+                'description' => 'List all globally available templates.'
+            ]
+        ];
+
+        $lastValue = end($commands);
+
+        foreach ($commands as $key => $value) {
+            echo "| $key:\n";
+            echo "| Arguments:\t<$value[args]>\n";
+            echo "| Description:\t$value[description]\n";
+            if ($value != $lastValue) {
+                echo "+\n";
+            }
+        }
+    }
 }
