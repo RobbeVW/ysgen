@@ -1,6 +1,22 @@
 index.php:
-test:
-    testSubFolder:
-    testFile.html:
-folder:
-    Harambe.php:
+App:
+    Controllers:
+        PagesController.php:
+        TaskController.php:
+    router.php:
+Models:
+    User.php:
+    Post.php:
+public:
+    css:
+    js:
+    images:
+assets:
+    views:
+        layout.html:
+        pages:
+            page.html:
+    sass:
+        app.sass:
+    js:
+        app.js:
