@@ -1,2 +1,2 @@
 @echo off
-php %~dp0/ysgen.php %cd% %*
+php "%~dp0/ysgen.php" %*

@@ -8,8 +8,6 @@ namespace Ysgen\Src;
 class ConsoleHelper
 {
     private $argv;
-    private $calledDirectory;
-    private $subject;
 
 
     /**
@@ -19,8 +17,6 @@ class ConsoleHelper
     public function __construct($argv)
     {
         $this->argv = $argv;
-        $this->calledDirectory = $argv[0];
-        $this->subject = $argv[1];
     }
 
     /**
@@ -30,8 +26,8 @@ class ConsoleHelper
     {
         $argv = $this->argv;
 
-        if (isset($argv[3])) {
-            $parser = new StructureParser(TEMPLATES_DIR . '/' . $argv[3] . '.yml');
+        if (isset($argv[2])) {
+            $parser = new StructureParser(TEMPLATES_DIR . '/' . $argv[2] . '.yml');
         } else {
             $parser = new StructureParser();
         }
@@ -46,8 +42,8 @@ class ConsoleHelper
     {
         $argv = $this->argv;
 
-        $overwrite = (isset($argv[4]) && (strtolower($argv[4] === 'overwrite')));
-        $saver = new StructureSaver($argv[3], $overwrite);
+        $overwrite = (isset($argv[3]) && (strtolower($argv[3] === 'overwrite')));
+        $saver = new StructureSaver($argv[2], $overwrite);
 
         $saver->save();
     }
