@@ -2,11 +2,11 @@
 Easily generate, save and load project structures on the fly!
 
 # Table of contents
-1. [Introduction](github.com)
-2. [Quick example](github.com)
-2. [Installation](github.com)
-2. [Generating structures](github.com)
-2. [Saving and re-using templates](github.com)
+1. [Introduction](https://github.com/glowdemon1/ysgen#introduction)
+2. [Quick example](https://github.com/glowdemon1/ysgen#quick-example)
+2. [Installation](https://github.com/glowdemon1/ysgen#installation)
+2. [Generating structures](https://github.com/glowdemon1/ysgen#generating-structures)
+2. [Saving and re-using templates](https://github.com/glowdemon1/ysgen#saving-and-re-using-templates)
 
 # Introduction
 YSGen (Yaml Structure Generator) is a package that allows you to easily generate a scaffolding project structure by using a yaml file to represent the project's structure.
@@ -85,7 +85,7 @@ After running the `ysgen generate` command on this file, you will create the act
 # Generating structures
 To create a new project structure, you must first create a folder and create a file called `structure.yml` inside that folder. The `structure.yml` file represents the projects structure, this file should not be named differently!
 
-You can now edit the `structure.yml` file, see [this](github.com) for a quick example. If you do not know yaml yet, check [this](http://docs.ansible.com/ansible/YAMLSyntax.html) out, yaml really isn't hard. Yaml works by using indentation, example:
+You can now edit the `structure.yml` file, see [this](https://github.com/glowdemon1/ysgen#quick-example) for a quick example. If you do not know yaml yet, check [this](http://docs.ansible.com/ansible/YAMLSyntax.html) out, yaml really isn't hard. Yaml works by using indentation, example:
 ```
 App:
     Controllers:
@@ -99,7 +99,7 @@ App:
 - The third and fourth line both create a `.php` file inside the `App/Controllers` directory. (To create a file you end the name with an extension, else it will be seen as a folder).
 - And finaly the last line creates a `router.php` file inside the `App` directory.
 
-After you have made your `structure.yml` file you can open the command prompt, change the directory to your project's folder and use `ysgen generate`. This will create the project structure for you. You may delete the `structure.yml` file after use, or [save](http://docs.ansible.com/ansible/YAMLSyntax.html) it.
+After you have made your `structure.yml` file you can open the command prompt, change the directory to your project's folder and use `ysgen generate`. This will create the project structure for you. You may delete the `structure.yml` file after use, or [save](https://github.com/glowdemon1/ysgen#saving-and-re-using-templates) it.
 
 # Saving and re-using templates
 `structure.yml` files can be easily saved and re-used later as templates. The files will be stored under the `data` folder in your YSGen installation folder. To save a file: `ysgen save <name>` where `<name>` is the name you want to save this file under. Afterwards you can easily run `ysgen generate <name>` to generate a project structure from a saved template.
