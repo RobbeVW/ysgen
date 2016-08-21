@@ -121,6 +121,31 @@ App:
     router.php:
 ```
 
+The above example will generate the following structure:
+```
+│   index.php
+│   structure.yml
+│
+└───App
+    │   router.php
+    │
+    └───Controllers
+            PagesController.php
+            TaskController.php
+```
+
+If you take a closer look at `index.php` file, you'll notice that it's populated with the following:
+```
+<html>
+    <head>
+        <title>test</title>
+    </head>
+    <body>
+        <h1>You can also initialize files with content!</h1>
+    </body>
+</html>
+```
+
 Simply place a pipe symbol after the filename and start your content on the next line followed by a single level of indentation. Please note that the colon and the pipe must have a space between eachother. See [this post](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) for more info.
 
 
