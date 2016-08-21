@@ -4,9 +4,10 @@ Easily generate, save and load project structures on the fly!
 # Table of contents
 1. [Introduction](https://github.com/glowdemon1/ysgen#introduction)
 2. [Quick example](https://github.com/glowdemon1/ysgen#quick-example)
-2. [Installation](https://github.com/glowdemon1/ysgen#installation)
-2. [Generating structures](https://github.com/glowdemon1/ysgen#generating-structures)
-2. [Saving and re-using templates](https://github.com/glowdemon1/ysgen#saving-and-re-using-templates)
+3. [Installation](https://github.com/glowdemon1/ysgen#installation)
+4. [Generating structures](https://github.com/glowdemon1/ysgen#generating-structures)
+5. [Initializing files with content](https://github.com/glowdemon1/ysgen#initializing-files-with-content)
+6. [Saving and re-using templates](https://github.com/glowdemon1/ysgen#saving-and-re-using-templates)
 
 # Introduction
 YSGen (Yaml Structure Generator) is a package that allows you to easily generate a scaffolding project structure by using a yaml file to represent the project's structure.
@@ -100,6 +101,28 @@ App:
 - And finaly the last line creates a `router.php` file inside the `App` directory.
 
 After you have made your `structure.yml` file you can open the command prompt, change the directory to your project's folder and use `ysgen generate`. This will create the project structure for you. You may delete the `structure.yml` file after use, or [save](https://github.com/glowdemon1/ysgen#saving-and-re-using-templates) it.
+
+# Initializing files with content
+You can also insert content in files when generating your project structure. Take a look at the example below:
+```
+index.php: |
+    <html>
+        <head>
+            <title>test</title>
+        </head>
+        <body>
+            <h1>You can also initialize files with content!</h1>
+        </body>
+    </html>
+App:
+    Controllers:
+        PagesController.php:
+        TaskController.php:
+    router.php:
+```
+
+Simply place a pipe symbol after the filename and start your content on the next line followed by a single level of indentation. Please note that the colon and the pipe must have a space between eachother. See [this post](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) for more info.
+
 
 # Saving and re-using templates
 `structure.yml` files can be easily saved and re-used later as templates. The files will be stored under the `data` folder in your YSGen installation folder. To save a file: `ysgen save <name>` where `<name>` is the name you want to save this file under. Afterwards you can easily run `ysgen generate <name>` to generate a project structure from a saved template.
