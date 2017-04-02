@@ -6,7 +6,7 @@ use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Yaml\Exception\ParseException;
 
 /**
- * The class responsible for translating .json files to directoryies
+ * The class responsible for translating Yaml files to directories
  */
 class StructureParser
 {
